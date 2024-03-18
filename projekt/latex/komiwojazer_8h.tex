@@ -1,0 +1,259 @@
+\hypertarget{komiwojazer_8h}{}\doxysection{komiwojazer.\+h File Reference}
+\label{komiwojazer_8h}\index{komiwojazer.h@{komiwojazer.h}}
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$map$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{komiwojazer_8h_a37e452eff3ab6ba831ae6500cf716de5}{sprawdz\+Parametry\+Wejsciowe}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]}, map$<$ string, int $>$ \&indeksy\+Przelacznikow)
+\begin{DoxyCompactList}\small\item\em Sprawdzenie arametrow wejsciowych. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{komiwojazer_8h_a0fedb864e1d92027043d47aa0181cd2c}{wczytaj\+Przelaczniki}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]}, int \&liczba\+Generacji, int \&liczba\+Osobnikow, string \&plik\+We, string \&plik\+Wy, map$<$ string, int $>$ indeksy\+Przelacznikow)
+\begin{DoxyCompactList}\small\item\em Wczytanie parametrow wejsciowych. \end{DoxyCompactList}\item 
+vector$<$ vector$<$ int $>$ $>$ \mbox{\hyperlink{komiwojazer_8h_ab4ecc5ed61fdd1eca7631ef4e7ce4592}{wczytaj\+Plik}} (std\+::string sciezka)
+\begin{DoxyCompactList}\small\item\em Macierz wejsciowa. \end{DoxyCompactList}\item 
+vector$<$ vector$<$ int $>$ $>$ \mbox{\hyperlink{komiwojazer_8h_af65d27a1feb534d52062bf0581eaccf5}{generuj\+Populacje\+Startowa}} (int ilosc\+Miast, int rozmiar\+Populacji, int miasto\+Startowe)
+\begin{DoxyCompactList}\small\item\em Generowanie populacji startowej. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{komiwojazer_8h_afe5e64132207900bcb6325a9b12c5a6e}{oblicz\+\_\+trase}} (vector$<$ vector$<$ int $>$ $>$ macierz\+\_\+odleglosci, vector$<$ int $>$kolejnosc)
+\begin{DoxyCompactList}\small\item\em Obliczanie dlugosci trasy. \end{DoxyCompactList}\item 
+vector$<$ vector$<$ int $>$ $>$ \mbox{\hyperlink{komiwojazer_8h_a21a670a0fd2829c600a88362c0fbc1f0}{sortuj\+Populacje}} (vector$<$ vector$<$ int $>$ $>$ populacja, vector$<$ vector$<$ int $>$ $>$ macierz\+Odleglosci)
+\begin{DoxyCompactList}\small\item\em Sortowanie tras. \end{DoxyCompactList}\item 
+vector$<$ vector$<$ int $>$ $>$ \mbox{\hyperlink{komiwojazer_8h_a49dd77d413b1ce93d84ff2659057af5e}{krzyzowanie}} (vector$<$ int $>$ rodzic1, vector$<$ int $>$ rodzic2)
+\begin{DoxyCompactList}\small\item\em Krzyzowanie dwoch tras. \end{DoxyCompactList}\item 
+vector$<$ vector$<$ int $>$ $>$ \mbox{\hyperlink{komiwojazer_8h_a6ea04e98b2be2a65044a9e0ce7c78c34}{nowa\+Generacja}} (vector$<$ vector$<$ int $>$ $>$ populacja\+Posortowana)
+\begin{DoxyCompactList}\small\item\em Generowanie nowych tras potomnych. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{komiwojazer_8h_ade6e3c0705ebf5c12471a677625b6958}{wyswietl\+Generacje}} (vector$<$ vector$<$ int $>$ $>$ generacja, vector$<$ vector$<$ int $>$ $>$ macierz\+Odleglosci)
+\begin{DoxyCompactList}\small\item\em Wyswietlanie danej generacji. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{komiwojazer_8h_a6fffa0042aff7d154db29f033c0c0646}{zapisz\+Do\+Pliku}} (int numer\+Generacji, vector$<$ int $>$ trasa, int dlugosc\+Trasy, ofstream \&plik\+Wyjsciowy)
+\begin{DoxyCompactList}\small\item\em Zapisanie wyniku do pliku wyjsciowego. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{komiwojazer_8h_af65d27a1feb534d52062bf0581eaccf5}\label{komiwojazer_8h_af65d27a1feb534d52062bf0581eaccf5}} 
+\index{komiwojazer.h@{komiwojazer.h}!generujPopulacjeStartowa@{generujPopulacjeStartowa}}
+\index{generujPopulacjeStartowa@{generujPopulacjeStartowa}!komiwojazer.h@{komiwojazer.h}}
+\doxysubsubsection{\texorpdfstring{generujPopulacjeStartowa()}{generujPopulacjeStartowa()}}
+{\footnotesize\ttfamily vector$<$ vector$<$ int $>$ $>$ generuj\+Populacje\+Startowa (\begin{DoxyParamCaption}\item[{int}]{ilosc\+Miast,  }\item[{int}]{rozmiar\+Populacji,  }\item[{int}]{miasto\+Startowe }\end{DoxyParamCaption})}
+
+
+
+Generowanie populacji startowej. 
+
+Funkcja losowo generuje pierwsze pokolenie -\/ pierwszy zestaw tras.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em ilosc\+Miast} & liczba miast, przez ktore komiwojazer musi przejsc \\
+\hline
+\mbox{\texttt{ in}}  & {\em rozmiar\+Populacji} & liczba tras, ktora funkcja ma wygenerowac \\
+\hline
+\mbox{\texttt{ in}}  & {\em miasto\+Startowe} & miasto, w ktorym komiwojazer ma trase rozpoczac oraz skonczyc\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Populacja startowa. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{komiwojazer_8h_a49dd77d413b1ce93d84ff2659057af5e}\label{komiwojazer_8h_a49dd77d413b1ce93d84ff2659057af5e}} 
+\index{komiwojazer.h@{komiwojazer.h}!krzyzowanie@{krzyzowanie}}
+\index{krzyzowanie@{krzyzowanie}!komiwojazer.h@{komiwojazer.h}}
+\doxysubsubsection{\texorpdfstring{krzyzowanie()}{krzyzowanie()}}
+{\footnotesize\ttfamily vector$<$ vector$<$ int $>$ $>$ krzyzowanie (\begin{DoxyParamCaption}\item[{vector$<$ int $>$}]{rodzic1,  }\item[{vector$<$ int $>$}]{rodzic2 }\end{DoxyParamCaption})}
+
+
+
+Krzyzowanie dwoch tras. 
+
+Funkcja krzyzuje dwie trasy i w rezultacie powstaja dwie nowe trasy.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em rodzic1} & trasa pierwsza do krzyzowania \\
+\hline
+\mbox{\texttt{ in}}  & {\em rodzic2} & trasa druga do krzyzowania\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Dwie nowe trasy. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{komiwojazer_8h_a6ea04e98b2be2a65044a9e0ce7c78c34}\label{komiwojazer_8h_a6ea04e98b2be2a65044a9e0ce7c78c34}} 
+\index{komiwojazer.h@{komiwojazer.h}!nowaGeneracja@{nowaGeneracja}}
+\index{nowaGeneracja@{nowaGeneracja}!komiwojazer.h@{komiwojazer.h}}
+\doxysubsubsection{\texorpdfstring{nowaGeneracja()}{nowaGeneracja()}}
+{\footnotesize\ttfamily vector$<$ vector$<$ int $>$ $>$ nowa\+Generacja (\begin{DoxyParamCaption}\item[{vector$<$ vector$<$ int $>$ $>$}]{populacja\+Posortowana }\end{DoxyParamCaption})}
+
+
+
+Generowanie nowych tras potomnych. 
+
+Funkcja wybiera lepsza polowe tras do krzyzowanie, za pom. f. krzyzowania nastepuje krzyzowanie. Najlepszy rezultat z pokolenia zawsze zostaje, gorsza polowa tras jest przepisana.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em populacja\+Posortowana} & posortowany zestaw tras w danym pokoleniu\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nowy zestaw tras -\/ nowa populacja 
+\end{DoxyReturn}
+\mbox{\Hypertarget{komiwojazer_8h_afe5e64132207900bcb6325a9b12c5a6e}\label{komiwojazer_8h_afe5e64132207900bcb6325a9b12c5a6e}} 
+\index{komiwojazer.h@{komiwojazer.h}!oblicz\_trase@{oblicz\_trase}}
+\index{oblicz\_trase@{oblicz\_trase}!komiwojazer.h@{komiwojazer.h}}
+\doxysubsubsection{\texorpdfstring{oblicz\_trase()}{oblicz\_trase()}}
+{\footnotesize\ttfamily int oblicz\+\_\+trase (\begin{DoxyParamCaption}\item[{vector$<$ vector$<$ int $>$ $>$}]{macierz\+\_\+odleglosci,  }\item[{vector$<$ int $>$}]{kolejnosc }\end{DoxyParamCaption})}
+
+
+
+Obliczanie dlugosci trasy. 
+
+Funkcja oblicza dlugosc pojedynczej trasy.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em macierz\+\_\+odleglosci} & macierz wejsciowa z odleglciami \\
+\hline
+\mbox{\texttt{ in}}  & {\em kolejnosc} & indeksy kolejnych miast\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Dlugosc trasy. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{komiwojazer_8h_a21a670a0fd2829c600a88362c0fbc1f0}\label{komiwojazer_8h_a21a670a0fd2829c600a88362c0fbc1f0}} 
+\index{komiwojazer.h@{komiwojazer.h}!sortujPopulacje@{sortujPopulacje}}
+\index{sortujPopulacje@{sortujPopulacje}!komiwojazer.h@{komiwojazer.h}}
+\doxysubsubsection{\texorpdfstring{sortujPopulacje()}{sortujPopulacje()}}
+{\footnotesize\ttfamily vector$<$ vector$<$ int $>$ $>$ sortuj\+Populacje (\begin{DoxyParamCaption}\item[{vector$<$ vector$<$ int $>$ $>$}]{populacja,  }\item[{vector$<$ vector$<$ int $>$ $>$}]{macierz\+Odleglosci }\end{DoxyParamCaption})}
+
+
+
+Sortowanie tras. 
+
+Funkcja sortuje trasy od najkrotszej do najdluzszej/niemozliwej.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em populacja} & zbior tras \\
+\hline
+\mbox{\texttt{ in}}  & {\em macierz\+Odleglosci} & wejsciowa macierz z odleglosciami\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Posortowane trasy nalezace do jednego pokolenia. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{komiwojazer_8h_a37e452eff3ab6ba831ae6500cf716de5}\label{komiwojazer_8h_a37e452eff3ab6ba831ae6500cf716de5}} 
+\index{komiwojazer.h@{komiwojazer.h}!sprawdzParametryWejsciowe@{sprawdzParametryWejsciowe}}
+\index{sprawdzParametryWejsciowe@{sprawdzParametryWejsciowe}!komiwojazer.h@{komiwojazer.h}}
+\doxysubsubsection{\texorpdfstring{sprawdzParametryWejsciowe()}{sprawdzParametryWejsciowe()}}
+{\footnotesize\ttfamily bool sprawdz\+Parametry\+Wejsciowe (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]},  }\item[{map$<$ string, int $>$ \&}]{indeksy\+Przelacznikow }\end{DoxyParamCaption})}
+
+
+
+Sprawdzenie arametrow wejsciowych. 
+
+Funkcja sprawdza czy wszystkie parametry wejsciowe zostaly wywolane.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em argc} & arg count. \\
+\hline
+\mbox{\texttt{ in}}  & {\em argv} & arg vector. \\
+\hline
+\mbox{\texttt{ out}}  & {\em indeksy\+Przelacznikow} & mapa indeksow, gdzie znajduja sie odpowiednie przelaczniki.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false gdy parametry wejsciowe zostana zle wpisane/ true 
+\end{DoxyReturn}
+\mbox{\Hypertarget{komiwojazer_8h_ab4ecc5ed61fdd1eca7631ef4e7ce4592}\label{komiwojazer_8h_ab4ecc5ed61fdd1eca7631ef4e7ce4592}} 
+\index{komiwojazer.h@{komiwojazer.h}!wczytajPlik@{wczytajPlik}}
+\index{wczytajPlik@{wczytajPlik}!komiwojazer.h@{komiwojazer.h}}
+\doxysubsubsection{\texorpdfstring{wczytajPlik()}{wczytajPlik()}}
+{\footnotesize\ttfamily vector$<$ vector$<$ int $>$ $>$ wczytaj\+Plik (\begin{DoxyParamCaption}\item[{std\+::string}]{sciezka }\end{DoxyParamCaption})}
+
+
+
+Macierz wejsciowa. 
+
+Funkcja wczytuje wejsciowy plik tekstowy i zapisuje go jako wektor wektorow.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em sciezka} & sciezka pliku wejsciowego\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Macierz odleglosci. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{komiwojazer_8h_a0fedb864e1d92027043d47aa0181cd2c}\label{komiwojazer_8h_a0fedb864e1d92027043d47aa0181cd2c}} 
+\index{komiwojazer.h@{komiwojazer.h}!wczytajPrzelaczniki@{wczytajPrzelaczniki}}
+\index{wczytajPrzelaczniki@{wczytajPrzelaczniki}!komiwojazer.h@{komiwojazer.h}}
+\doxysubsubsection{\texorpdfstring{wczytajPrzelaczniki()}{wczytajPrzelaczniki()}}
+{\footnotesize\ttfamily bool wczytaj\+Przelaczniki (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]},  }\item[{int \&}]{liczba\+Generacji,  }\item[{int \&}]{liczba\+Osobnikow,  }\item[{string \&}]{plik\+We,  }\item[{string \&}]{plik\+Wy,  }\item[{map$<$ string, int $>$}]{indeksy\+Przelacznikow }\end{DoxyParamCaption})}
+
+
+
+Wczytanie parametrow wejsciowych. 
+
+Funkcja sprawdza czy po przelacznikach wystepuje parametr oraz czy parametry sa mozliwe do wykonywania programu.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em argc} & arg count. \\
+\hline
+\mbox{\texttt{ in}}  & {\em argv} & arg vector. \\
+\hline
+\mbox{\texttt{ in}}  & {\em indeksy\+Przelacznikow} & mapa indeksow, gdzie znajduja sie odpowiednie przelaczniki. \\
+\hline
+\mbox{\texttt{ out}}  & {\em liczba\+Generacji} & ilosc pokolen ktora ma zostac poddana ewoulucji. \\
+\hline
+\mbox{\texttt{ out}}  & {\em liczba\+Osobnikow} & liczba osobnikow w danym pokoleniu. \\
+\hline
+\mbox{\texttt{ out}}  & {\em plik\+We} & sciezka pliku wejsciowego \\
+\hline
+\mbox{\texttt{ out}}  & {\em plik\+Wy} & sciezka pliku wyjsciowego\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false gdy parametry wejsciowe zostana zle wpisane/ true 
+\end{DoxyReturn}
+\mbox{\Hypertarget{komiwojazer_8h_ade6e3c0705ebf5c12471a677625b6958}\label{komiwojazer_8h_ade6e3c0705ebf5c12471a677625b6958}} 
+\index{komiwojazer.h@{komiwojazer.h}!wyswietlGeneracje@{wyswietlGeneracje}}
+\index{wyswietlGeneracje@{wyswietlGeneracje}!komiwojazer.h@{komiwojazer.h}}
+\doxysubsubsection{\texorpdfstring{wyswietlGeneracje()}{wyswietlGeneracje()}}
+{\footnotesize\ttfamily void wyswietl\+Generacje (\begin{DoxyParamCaption}\item[{vector$<$ vector$<$ int $>$ $>$}]{generacja,  }\item[{vector$<$ vector$<$ int $>$ $>$}]{macierz\+Odleglosci }\end{DoxyParamCaption})}
+
+
+
+Wyswietlanie danej generacji. 
+
+Funkcja wyswietla zestaw tras jednej generacji oraz ich d³ugosc
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em generacja} & zestaw tras \\
+\hline
+\mbox{\texttt{ in}}  & {\em macierz\+Odleglosci} & macierz wejsciowa \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{komiwojazer_8h_a6fffa0042aff7d154db29f033c0c0646}\label{komiwojazer_8h_a6fffa0042aff7d154db29f033c0c0646}} 
+\index{komiwojazer.h@{komiwojazer.h}!zapiszDoPliku@{zapiszDoPliku}}
+\index{zapiszDoPliku@{zapiszDoPliku}!komiwojazer.h@{komiwojazer.h}}
+\doxysubsubsection{\texorpdfstring{zapiszDoPliku()}{zapiszDoPliku()}}
+{\footnotesize\ttfamily void zapisz\+Do\+Pliku (\begin{DoxyParamCaption}\item[{int}]{numer\+Generacji,  }\item[{vector$<$ int $>$}]{trasa,  }\item[{int}]{dlugosc\+Trasy,  }\item[{ofstream \&}]{plik\+Wyjsciowy }\end{DoxyParamCaption})}
+
+
+
+Zapisanie wyniku do pliku wyjsciowego. 
+
+Funkcja zapisuje do pliku wyjsciowego najkrotsza trase oraz jej dlugosc w kolejnych generacjach.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em numer\+Generacji} & numer pokolenia \\
+\hline
+\mbox{\texttt{ in}}  & {\em trasa} & kolejne miasta w danej trasie \\
+\hline
+\mbox{\texttt{ in}}  & {\em dlugosc\+Trasy} & dlugosc trasy \\
+\hline
+\mbox{\texttt{ out}}  & {\em plik\+Wyjsciowy} & plik z wynikami \\
+\hline
+\end{DoxyParams}

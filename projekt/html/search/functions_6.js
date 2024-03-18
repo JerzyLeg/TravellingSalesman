@@ -1,0 +1,6 @@
+var searchData=
+[
+  ['wczytajplik_0',['wczytajPlik',['../komiwojazer_8cpp.html#ab4ecc5ed61fdd1eca7631ef4e7ce4592',1,'wczytajPlik(std::string sciezka):&#160;komiwojazer.cpp'],['../komiwojazer_8h.html#ab4ecc5ed61fdd1eca7631ef4e7ce4592',1,'wczytajPlik(std::string sciezka):&#160;komiwojazer.cpp']]],
+  ['wczytajprzelaczniki_1',['wczytajPrzelaczniki',['../komiwojazer_8cpp.html#a0fedb864e1d92027043d47aa0181cd2c',1,'wczytajPrzelaczniki(int argc, char *argv[], int &amp;liczbaGeneracji, int &amp;liczbaOsobnikow, string &amp;plikWe, string &amp;plikWy, map&lt; string, int &gt; indeksyPrzelacznikow):&#160;komiwojazer.cpp'],['../komiwojazer_8h.html#a0fedb864e1d92027043d47aa0181cd2c',1,'wczytajPrzelaczniki(int argc, char *argv[], int &amp;liczbaGeneracji, int &amp;liczbaOsobnikow, string &amp;plikWe, string &amp;plikWy, map&lt; string, int &gt; indeksyPrzelacznikow):&#160;komiwojazer.cpp']]],
+  ['wyswietlgeneracje_2',['wyswietlGeneracje',['../komiwojazer_8cpp.html#ade6e3c0705ebf5c12471a677625b6958',1,'wyswietlGeneracje(vector&lt; vector&lt; int &gt; &gt; generacja, vector&lt; vector&lt; int &gt; &gt; macierzOdleglosci):&#160;komiwojazer.cpp'],['../komiwojazer_8h.html#ade6e3c0705ebf5c12471a677625b6958',1,'wyswietlGeneracje(vector&lt; vector&lt; int &gt; &gt; generacja, vector&lt; vector&lt; int &gt; &gt; macierzOdleglosci):&#160;komiwojazer.cpp']]]
+];

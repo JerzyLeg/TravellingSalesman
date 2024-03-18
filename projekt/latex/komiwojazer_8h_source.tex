@@ -1,0 +1,37 @@
+\hypertarget{komiwojazer_8h_source}{}\doxysection{komiwojazer.\+h}
+\mbox{\hyperlink{komiwojazer_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <map>} }
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{8 }
+\DoxyCodeLine{24 \textcolor{keywordtype}{bool} \mbox{\hyperlink{komiwojazer_8h_a37e452eff3ab6ba831ae6500cf716de5}{sprawdzParametryWejsciowe}}(\textcolor{keywordtype}{int} argc, \textcolor{keywordtype}{char}* argv[], map<string, int>\& indeksyPrzelacznikow);}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{46 \textcolor{keywordtype}{bool} \mbox{\hyperlink{komiwojazer_8h_a0fedb864e1d92027043d47aa0181cd2c}{wczytajPrzelaczniki}}(\textcolor{keywordtype}{int} argc, \textcolor{keywordtype}{char}* argv[], \textcolor{keywordtype}{int}\& liczbaGeneracji, \textcolor{keywordtype}{int}\& liczbaOsobnikow, \textcolor{keywordtype}{string}\& plikWe, \textcolor{keywordtype}{string}\& plikWy, map<string, int> indeksyPrzelacznikow);}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{63 vector<vector<int>> \mbox{\hyperlink{komiwojazer_8h_ab4ecc5ed61fdd1eca7631ef4e7ce4592}{wczytajPlik}} (std::string sciezka);}
+\DoxyCodeLine{64 }
+\DoxyCodeLine{82 vector<vector<int>> \mbox{\hyperlink{komiwojazer_8h_af65d27a1feb534d52062bf0581eaccf5}{generujPopulacjeStartowa}}(\textcolor{keywordtype}{int} iloscMiast, \textcolor{keywordtype}{int} rozmiarPopulacji, \textcolor{keywordtype}{int} miastoStartowe);}
+\DoxyCodeLine{83 }
+\DoxyCodeLine{100 \textcolor{keywordtype}{int} \mbox{\hyperlink{komiwojazer_8h_afe5e64132207900bcb6325a9b12c5a6e}{oblicz\_trase}}(vector<vector<int>> macierz\_odleglosci, vector<int>kolejnosc);}
+\DoxyCodeLine{101 }
+\DoxyCodeLine{118 vector<vector<int>> \mbox{\hyperlink{komiwojazer_8h_a21a670a0fd2829c600a88362c0fbc1f0}{sortujPopulacje}}(vector<vector<int>> populacja, vector<vector<int>> macierzOdleglosci);}
+\DoxyCodeLine{119 }
+\DoxyCodeLine{135 vector<vector<int>> \mbox{\hyperlink{komiwojazer_8h_a49dd77d413b1ce93d84ff2659057af5e}{krzyzowanie}}(vector <int> rodzic1, vector <int> rodzic2);}
+\DoxyCodeLine{136 }
+\DoxyCodeLine{151 vector<vector<int>> \mbox{\hyperlink{komiwojazer_8h_a6ea04e98b2be2a65044a9e0ce7c78c34}{nowaGeneracja}}(vector<vector<int>> populacjaPosortowana);}
+\DoxyCodeLine{152 }
+\DoxyCodeLine{166 \textcolor{keywordtype}{void} \mbox{\hyperlink{komiwojazer_8h_ade6e3c0705ebf5c12471a677625b6958}{wyswietlGeneracje}} (vector<vector<int>> generacja,vector<vector<int>> macierzOdleglosci);}
+\DoxyCodeLine{167 }
+\DoxyCodeLine{183 \textcolor{keywordtype}{void} \mbox{\hyperlink{komiwojazer_8h_a6fffa0042aff7d154db29f033c0c0646}{zapiszDoPliku}}(\textcolor{keywordtype}{int} numerGeneracji, vector<int> trasa, \textcolor{keywordtype}{int} dlugoscTrasy, ofstream\& plikWyjsciowy);}
+\DoxyCodeLine{184 }
+\DoxyCodeLine{185 }
+\DoxyCodeLine{186 }
+\DoxyCodeLine{187 }
+\DoxyCodeLine{188 }
+
+\end{DoxyCode}
